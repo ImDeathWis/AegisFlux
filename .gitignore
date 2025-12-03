@@ -1,0 +1,82 @@
+# ---------------------------
+# GO
+# ---------------------------
+/bin/
+/build/
+/dist/
+/out/
+/*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go cache and modules
+/go.sum
+/vendor/
+/*.test
+
+# ---------------------------
+# ANGULAR
+# ---------------------------
+/dashboard/node_modules/
+/dashboard/dist/
+/dashboard/.angular/
+/dashboard/.cache/
+
+# Angular environment files
+dashboard/src/environments/environment.prod.ts
+dashboard/src/environments/environment.ts
+
+# ---------------------------
+# DOCKER
+# ---------------------------
+/docker/*.log
+docker-compose.override.yml
+
+# Ignore Docker build cache
+**/.dockerignore
+
+# ---------------------------
+# KUBERNETES
+# ---------------------------
+*.yaml~
+*k8s-secret*.yaml
+*kubeconfig*
+
+# ---------------------------
+# VS CODE
+# ---------------------------
+.vscode/
+.history/
+*.code-workspace
+
+# ---------------------------
+# LOGS / TEMP
+# ---------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# PYTHON / SCRIPTS
+# ---------------------------
+__pycache__/
+*.pyc
+
+# ---------------------------
+# HONEYPOT LOGS
+# ---------------------------
+/honeypot/*.log
+
+# ---------------------------
+# BACKUP FILES
+# ---------------------------
+*.bak
+*.old
+*.backup
