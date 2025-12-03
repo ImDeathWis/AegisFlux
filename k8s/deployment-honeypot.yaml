@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aegisflux-honeypot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aegisflux-honeypot
+  template:
+    metadata:
+      labels:
+        app: aegisflux-honeypot
+    spec:
+      containers:
+      - name: honeypot
+        image: yourregistry/aegisflux-honeypot
+        ports:
+        - containerPort: 8088
