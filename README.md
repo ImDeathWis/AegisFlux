@@ -1,4 +1,4 @@
-# 🛡️ AegisFlux  
+# AegisFlux  
 **Kubernetes Network Monitor + Honeypot + API + Dashboard**
 
 AegisFlux es una plataforma completa para observabilidad y seguridad en entornos Kubernetes.  
@@ -14,7 +14,7 @@ Incluye:
 
 ---
 
-## 🚀 Arquitectura General
+## Arquitectura General
 
 ```mermaid
 flowchart TD
