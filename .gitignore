@@ -5,14 +5,26 @@
 /build/
 /dist/
 /out/
+<<<<<<< HEAD
 *.exe
+=======
+/*.exe
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
 *.exe~
 *.dll
 *.so
 *.dylib
+<<<<<<< HEAD
 *.test
 
 /vendor/
+=======
+
+# Go cache and modules
+/go.sum
+/vendor/
+/*.test
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
 
 # ---------------------------
 # ANGULAR
@@ -22,8 +34,14 @@
 /dashboard/.angular/
 /dashboard/.cache/
 
+<<<<<<< HEAD
 /dashboard/src/environments/environment.ts
 /dashboard/src/environments/environment.prod.ts
+=======
+# Angular environment files
+dashboard/src/environments/environment.prod.ts
+dashboard/src/environments/environment.ts
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
 
 # ---------------------------
 # DOCKER
@@ -31,6 +49,12 @@
 /docker/*.log
 docker-compose.override.yml
 
+<<<<<<< HEAD
+=======
+# Ignore Docker build cache
+**/.dockerignore
+
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
 # ---------------------------
 # KUBERNETES
 # ---------------------------
@@ -53,12 +77,26 @@ docker-compose.override.yml
 *.temp
 *.swp
 
+<<<<<<< HEAD
+=======
+# OS files
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# PYTHON / SCRIPTS
+# ---------------------------
+__pycache__/
+*.pyc
+
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
 # ---------------------------
 # HONEYPOT LOGS
 # ---------------------------
 /honeypot/*.log
 
 # ---------------------------
+<<<<<<< HEAD
 # ENV
 # ---------------------------
 .env
@@ -72,8 +110,14 @@ Thumbs.db
 
 # ---------------------------
 # BACKUPS
+=======
+# BACKUP FILES
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
 # ---------------------------
 *.bak
 *.old
 *.backup
+<<<<<<< HEAD
 
+=======
+>>>>>>> 560fdabc20e17d6a753458a0a3031ed76f29c595
