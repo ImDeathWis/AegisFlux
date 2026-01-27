@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AegisFlux Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+  <header class="navbar">
+    <div class="logo">AegisFlux</div>
+    <nav class="menu">
+      <a href="index.html">Dashboard</a>
+      <a href="logs.html">Logs</a>
+      <a href="agents.html">Agentes</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <button id="mode-toggle">🌙</button>
+  </header>
+
+  <main class="main-content">
+    <section class="dashboard" id="dashboard-cards">
+      <!-- Tarjetas generadas por JS -->
+    </section>
+
+    <section class="logs">
+      <h2>Logs recientes</h2>
+      <table>
+        <thead>
+          <tr><th>Hora</th><th>Agente</th><th>Mensaje</th></tr>
+        </thead>
+        <tbody id="logs-table">
+          <!-- Logs generados por JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
