@@ -1,0 +1,79 @@
+# ---------------------------
+# GO
+# ---------------------------
+/bin/
+/build/
+/dist/
+/out/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+/vendor/
+
+# ---------------------------
+# ANGULAR
+# ---------------------------
+/dashboard/node_modules/
+/dashboard/dist/
+/dashboard/.angular/
+/dashboard/.cache/
+
+/dashboard/src/environments/environment.ts
+/dashboard/src/environments/environment.prod.ts
+
+# ---------------------------
+# DOCKER
+# ---------------------------
+/docker/*.log
+docker-compose.override.yml
+
+# ---------------------------
+# KUBERNETES
+# ---------------------------
+*.yaml~
+*k8s-secret*.yaml
+*kubeconfig*
+
+# ---------------------------
+# VS CODE
+# ---------------------------
+.vscode/
+.history/
+*.code-workspace
+
+# ---------------------------
+# LOGS / TEMP
+# ---------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+
+# ---------------------------
+# HONEYPOT LOGS
+# ---------------------------
+/honeypot/*.log
+
+# ---------------------------
+# ENV
+# ---------------------------
+.env
+.env.*
+
+# ---------------------------
+# OS
+# ---------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# BACKUPS
+# ---------------------------
+*.bak
+*.old
+*.backup
+

@@ -1,0 +1,50 @@
+name: AegisFlux CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: "1.22"
+
+    - name: Build Go services
+      run: |
+        cd agent && go build -o agent
+        cd ../api && go build -o api
+        cd ../honeypot && go build *.go
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: Build Angular dashboard
+      working-directory: ./dashboard
+      run: |
+        npm install
+        npm run build
+
+    - name: Docker build
+      run: |
+        echo "Aquí puedes añadir docker build y push a tu registry"
+
+    - name: Archive build
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-output
+        path: |
+          agent/agent
+          api/api
+          honeypot/*.exe
+          dashboard/dist/

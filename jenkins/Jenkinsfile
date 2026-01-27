@@ -1,0 +1,14 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') { steps { checkout scm } }
+    stage('Build Components') {
+      steps {
+        dir('agent') { sh 'go build -o agent' }
+        dir('honeypot') { sh 'go build *.go' }
+        dir('api') { sh 'go build -o api' }
+      }
+    }
+    stage('Deploy') { steps { echo 'kubectl apply -f k8s/' } }
+  }
+}
